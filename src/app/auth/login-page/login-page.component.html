@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 p-4 ">
+      <h3>Login</h3>
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+
+          <label for="username">Your username</label>
+          <input type="text"
+                 ngModel
+                 required
+                 id="username"
+                 #username="ngModel"
+                 class="form-control"
+                 name="username">
+          <div *ngIf="!username.valid && username.touched" class="alert alert-danger mt-2">
+            Username is empty!
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password"
+                 ngModel
+                 required
+                 class="form-control"
+                 id="password"
+                 name="password"
+                 #password="ngModel"
+                 minlength="5">
+          <div *ngIf="!password.valid && password.touched" class="alert alert-danger mt-2">
+            Password is not correct.
+            <br>
+            It must contain more than 5 characters.
+          </div>
+        </div>
+
+        <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Submit</button>
+        <br>
+      </form>
+      <div *ngIf="authError"
+           class="alert alert-danger mt-2">
+        {{authError}}
+      </div>
+    </div>
+  </div>
+</div>
