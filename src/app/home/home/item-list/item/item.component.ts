@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Item} from "../../../item.model";
+import {ItemsService} from "../../../items.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-item',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item.component.scss']
 })
 export class ItemComponent implements OnInit {
+  @Input() item: Item;
+  @Input() position: number;
 
-  constructor() { }
+  constructor(private itemsService: ItemsService, private router: Router) {
+  }
 
   ngOnInit() {
   }
 
+  onDelete(position: number) {
+    this.itemsService.removeItem(position);
+  }
+
+  onNavigate() {
+    this.router.navigate([this.position]);
+  }
 }

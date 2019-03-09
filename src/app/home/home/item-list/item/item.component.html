@@ -1,3 +1,5 @@
-<p>
-  item works!
-</p>
+<div class=" " (click)="onNavigate()">
+  <span class="font-weight-bold">{{item.title}}</span>
+  <span class="badge badge-pill badge-primary">{{item.comments.length}}</span>
+  <button class="btn btn-outline-danger" (click)="onDelete(position)">Delete</button>
+</div>

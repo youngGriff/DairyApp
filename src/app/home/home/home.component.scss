@@ -1,3 +1,17 @@
 .sidebar {
   width: 250px;
+  transition: all .3s;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-250px);
+    width: 0;
+  }
 }
