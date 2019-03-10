@@ -14,7 +14,7 @@ export class ItemsService {
   constructor() {
     const items: Item[] = JSON.parse(localStorage.getItem(ItemsService.ITEMS_KEY)) || [];
     this.items = items as Item[];
-    console.log(items);
+   // console.log(items);
     this.items$.next(this.items);
   }
 

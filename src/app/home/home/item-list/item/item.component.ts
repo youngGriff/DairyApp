@@ -20,9 +20,7 @@ export class ItemComponent implements OnInit {
 
   onDelete(position: number) {
     this.itemsService.removeItem(position);
+    this.router.navigate(['/'])
   }
 
-  onNavigate() {
-    this.router.navigate([this.position]);
-  }
 }
