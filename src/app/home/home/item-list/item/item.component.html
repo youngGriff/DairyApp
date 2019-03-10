@@ -1,5 +1,5 @@
-<div class=" " (click)="onNavigate()">
-  <span class="font-weight-bold">{{item.title}}</span>
-  <span class="badge badge-pill badge-primary">{{item.comments.length}}</span>
-  <button class="btn btn-outline-danger" (click)="onDelete(position)">Delete</button>
+<div class="d-flex align-items-center item"  routerLinkActive="item--active" routerLink="/{{position}}">
+  <span class="font-weight-bold ">{{item.title}}</span>
+  <span class="badge badge-pill badge-primary ml-2 h-auto">{{item.comments.length}}</span>
+  <button class="btn btn-outline-danger d-inline ml-auto" (click)="onDelete(position)">Delete</button>
 </div>

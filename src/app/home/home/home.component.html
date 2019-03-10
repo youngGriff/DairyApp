@@ -1,8 +1,16 @@
 <main class="wrapper">
   <aside class="sidebar">
-    <h1>DairyApp</h1>
-    <p>Comments with no sense</p>
+    <h1 class="sidebar__title">DairyApp</h1>
+    <p class="sidebar__subtitle">Comments with no sense</p>
   </aside>
-  <app-item-list></app-item-list>
-  <router-outlet></router-outlet>
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <app-item-list></app-item-list>
+      </div>
+      <div class="col-md-6 col-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
 </main>

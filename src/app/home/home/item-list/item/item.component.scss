@@ -1,0 +1,9 @@
+.item {
+  transition: all 0.3s;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &--active {
+    border-left: #dc3545 6px solid;
+  }
+}

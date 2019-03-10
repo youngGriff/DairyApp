@@ -1,7 +1,12 @@
+
+@import "~bootstrap/scss/bootstrap-reboot";
 .form-control.ng-touched.ng-invalid {
   border: 1px solid #dc3545;
 }
 
 .form-control.ng-valid {
   border: 1px solid #28a745;
+}
+html,body{
+  height: 100%;
 }

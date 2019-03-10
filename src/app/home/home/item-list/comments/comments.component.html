@@ -1,7 +1,11 @@
 <div class="card">
-  <h2>
+  <h2 class="card-title">
     Comments № {{currentPosition + 1}}
   </h2>
+  <app-comment-item *ngFor="let comment of currentItem.comments" [comment]="comment"></app-comment-item>
+  <div class="user">
+    <div class="user__avatar"></div>
+    <textarea #areaElement (keyup.enter)="onSubmitComment(areaElement.value.trim()); areaElement.value='' "
+              class="form-control" rows="4"></textarea>
+  </div>
 </div>
-<app-comment-item *ngFor="let comment of currentItem.comments" [comment]="comment"></app-comment-item>
-<textarea #areaElement (keyup.enter)="onSubmitComment(areaElement.value.trim()); areaElement.value='' " class="form-control" rows="4"></textarea>

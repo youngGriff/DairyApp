@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Item} from "../../item.model";
 import {ItemsService} from "../../items.service";
 import {BehaviorSubject} from "rxjs";
+import {Item} from "../item.model";
 
 @Component({
   selector: 'app-item-list',

@@ -1,3 +1,3 @@
 #ToDo
 
-- [ ] Styling 
+- [x] Styling (Partly done)
